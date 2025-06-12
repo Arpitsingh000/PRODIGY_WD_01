@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Navigation Menu</title>
+    <style>
+       
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 2000px;
+           
+        }
+
+      
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: grey;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            z-index: 1000;
+        }
+
+        
+        nav.scrolled {
+            background-color: #0094f0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        
+        nav a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        div {
+            background-color: #373737;
+            height: 80vh;
+            padding: 20px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div style="padding-top: 80px; font-size: large; ">
+        <h1>Scroll Down to See the Effect</h1>
+        <p>Keep scrolling to see how the navigation bar changes when you scroll down.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam in facere hic, omnis
+            voluptas quas explicabo distinctio neque incidunt repellendus earum quod reiciendis eius officia
+            necessitatibus fuga a. Aperiam iste officia libero nam at quibusdam deleniti assumenda, tenetur maiores
+            incidunt expedita est molestiae, nisi facilis corporis exercitationem beatae porro, repellendus iusto velit
+            odio reiciendis error consequuntur. Aperiam, sequi amet, minus sunt eligendi dolor hic soluta obcaecati
+            dolore exercitationem totam laudantium delectus odit. Tenetur voluptatibus delectus a minima porro, quisquam
+            corrupti dolorem molestias odio vel velit ea culpa sed ullam, voluptatem nihil! Incidunt expedita est fugit
+            ratione eos cupiditate voluptas quos!</p>
+       
+    </div>
+    <div>
+        <h2 id="home">Home Section</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet hic recusandae aspernatur commodi deserunt
+            porro repudiandae veniam veritatis qui mollitia ea vero eaque, voluptas nostrum at quibusdam excepturi non
+            incidunt placeat provident quis doloremque. Accusantium, architecto? Ullam tenetur, earum sunt alias
+            molestiae omnis nihil voluptates iste officiis aperiam nostrum quibusdam?</p>
+        <h2 id="about">About Section</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam deserunt earum minus fuga reprehenderit quo
+            fugit fugiat! Voluptate placeat excepturi commodi ipsum nemo, tempora at ratione ex sapiente exercitationem,
+            qui blanditiis, sed tenetur quam hic temporibus voluptatum eaque! Ducimus, recusandae?</p>
+        <h2 id="services">Services Section</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et laudantium accusantium voluptas autem odio eius
+            vitae delectus sed nulla laborum earum perferendis repellat quidem quod, repellendus totam quo! Fuga aliquid
+            eveniet nesciunt, rem impedit neque eligendi. A libero, nam laudantium quod non id impedit reiciendis
+            placeat illum ipsa similique porro.</p>
+        <h2 id="contact">Contact Section</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem porro a harum laboriosam
+            voluptates quibusdam, placeat officia dignissimos qui, explicabo quod saepe accusamus ab? Quod reiciendis
+            ipsam iusto accusantium officia magni expedita excepturi doloremque explicabo? Aut illum praesentium debitis
+            dolor perferendis nostrum tempore fuga? Voluptates dolorum maiores nostrum repudiandae!</p>
+    </div>
+
+
+    <script>
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
